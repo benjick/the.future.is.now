@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    restart: always
+    build: .
+    ports:
+     - "5000:3000"
+    environment:
+      - VIRTUAL_HOST=maxmalm.se,www.maxmalm.se
+      - LETSENCRYPT_HOST=maxmalm.se,www.maxmalm.se
+      - LETSENCRYPT_EMAIL=benjick@dumfan.net
