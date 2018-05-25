@@ -11,6 +11,8 @@ export default class Fit extends React.Component {
     return (
       <div className="fit">
         <h1
+          className="glitch"
+          data-text={this.props.children}
           ref={ref => {
             this.h1 = ref;
           }}>
