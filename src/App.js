@@ -17,7 +17,7 @@ const App = () => (
     </ul>
     <ul>
       <li>
-        <a href="http://github.com">Github</a>
+        <a href="http://github.com/benjick">Github</a>
       </li>
       <li>
         <a href="mailto:max@malm.me">max@malm.me</a>
