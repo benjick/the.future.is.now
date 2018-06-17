@@ -4,14 +4,14 @@ import fitty from 'fitty';
 export default class Fit extends React.Component {
   componentDidMount() {
     fitty(this.h1, {
-      maxSize: 150,
+      maxSize: this.props.maxSize,
     });
   }
   render() {
     return (
       <div className="fit">
         <h1
-          className="glitch"
+          className={this.props.glitch && 'glitch'}
           data-text={this.props.children}
           ref={ref => {
             this.h1 = ref;
@@ -22,3 +22,8 @@ export default class Fit extends React.Component {
     );
   }
 }
+
+Fit.defaultProps = {
+  glitch: true,
+  maxSize: 150,
+};

@@ -1,29 +1,15 @@
 import React from 'react';
-import Fit from './Fit';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from './Home';
+import Course from './Course';
 
 const App = () => (
-  <React.Fragment>
-    <Fit>Max Malm</Fit>
-    <Fit>Max Malm</Fit>
-    <Fit>Max Malm</Fit>
-    <h2>Frontend developer</h2>
-    <ul>
-      <li>React</li>
-      <li>Web</li>
-      <li>Computers</li>
-      <li>Mobile</li>
-      <li>Docker</li>
-      <li>Hyped stuff</li>
-    </ul>
-    <ul>
-      <li>
-        <a href="http://github.com/benjick">Github</a>
-      </li>
-      <li>
-        <a href="mailto:max@malm.me">max@malm.me</a>
-      </li>
-    </ul>
-  </React.Fragment>
+  <Router>
+    <Switch>
+      <Route path="/react" component={Course} />
+      <Route path="/" component={Home} />
+    </Switch>
+  </Router>
 );
 
 export default App;
