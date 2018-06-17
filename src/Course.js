@@ -35,13 +35,17 @@ const message = {
 ws.send(JSON.stringify(message));
 `;
 
-const test = `
-import React from 'react';
-import Enzyme, {mount} from 'enzyme';
+const setupTest = `
+// src/setupTests.js
+import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Form from './Form';
 
 Enzyme.configure({adapter: new Adapter()});
+`
+
+const test = `
+import React from 'react';
+import {mount} from 'enzyme';
 
 describe('Component', () => {
   it('should do something', () => {
@@ -79,6 +83,7 @@ const Home = () => (
         <Highlight language="bash">
           yarn add --dev enzyme enzyme-adapter-react-16
         </Highlight>
+        <Highlight>{setupTest}</Highlight>
         <Highlight>{test}</Highlight>
       </div>
     </div>
