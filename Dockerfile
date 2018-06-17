@@ -8,5 +8,6 @@ RUN yarn
 COPY . /var/ui
 
 RUN yarn build
+RUN cp build/index.html build/404.html
 RUN rm -rf node_modules
 CMD http-server ./build -p 3000 -d false
