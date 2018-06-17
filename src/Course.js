@@ -35,6 +35,21 @@ const message = {
 ws.send(JSON.stringify(message));
 `;
 
+const test = `
+import React from 'react';
+import Enzyme, {mount} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import Form from './Form';
+
+Enzyme.configure({adapter: new Adapter()});
+
+describe('Component', () => {
+  it('should do something', () => {
+    // test here
+  });
+});
+`;
+
 const Home = () => (
   <div className="course">
     <Fit glitch={false} maxSize={100}>
@@ -61,6 +76,10 @@ const Home = () => (
         <Highlight>{cra}</Highlight>
         <Highlight>{wss}</Highlight>
         <Highlight>{ws}</Highlight>
+        <Highlight language="bash">
+          yarn add --dev enzyme enzyme-adapter-react-16
+        </Highlight>
+        <Highlight>{test}</Highlight>
       </div>
     </div>
   </div>
