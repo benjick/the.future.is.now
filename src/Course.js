@@ -6,6 +6,7 @@ const clone = `
 git clone https://github.com/benjick/accenture2
 cd accenture2
 yarn
+yarn add redux redux-thunk react-redux
 yarn start
 `;
 
