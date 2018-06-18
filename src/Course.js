@@ -75,6 +75,11 @@ const Home = () => (
           <li>Jest</li>
           <li>Styled Components</li>
         </ul>
+        <p>
+          <a href="https://github.com/benjick/accenture">
+            https://github.com/benjick/accenture
+          </a>
+        </p>
       </div>
       <div style={{flex: 1}}>
         <Highlight>{cra}</Highlight>
