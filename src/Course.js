@@ -2,6 +2,13 @@ import React from 'react';
 import Fit from './Fit';
 import Highlight from './Highlight';
 
+const clone = `
+git clone https://github.com/benjick/accenture2
+cd accenture2
+yarn
+yarn start
+`;
+
 const cra = `
 yarn create react-app react-course
 cd react-course
@@ -41,7 +48,7 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({adapter: new Adapter()});
-`
+`;
 
 const test = `
 import React from 'react';
@@ -82,6 +89,7 @@ const Home = () => (
         </p>
       </div>
       <div style={{flex: 1}}>
+        <Highlight>{clone}</Highlight>
         <Highlight>{cra}</Highlight>
         <Highlight>{wss}</Highlight>
         <Highlight>{ws}</Highlight>
